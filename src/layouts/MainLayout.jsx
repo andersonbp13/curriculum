@@ -53,9 +53,13 @@ const MainLayout = () => {
           </div>
         </nav>
 
-        <div>
-          <Outlet/>
-        </div>
+          <ul className="h-full flex md:flex-row ">
+            <div className='bg-gris rounded-tr-2xl sm:w-0 md:w-1/5' />
+            <div className=' sm:w-full md:w-4/5 lg:w-3/5 mt-2'>
+              <Outlet/>
+            </div>
+            <div className='bg-gris rounded-tl-2xl sm:w-0 lg:w-1/5' />
+          </ul>
       </main>
   );
 }
