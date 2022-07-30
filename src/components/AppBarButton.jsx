@@ -1,7 +1,7 @@
 const AppBarButton = ({name, onClickEvent}) => {
     return (
         <div>
-            <button className='text-gray-50 font-bold shadow p-2 rounded-lg dark:hover:bg-gray-700' onClick={onClickEvent}>{name}</button>
+            <button className='sm:text-text-boton-gris md:text-text-boton-blanco font-bold p-2 rounded-lg dark:hover:bg-gray-700 sm:m-6 md:m-1' onClick={onClickEvent}>{name}</button>
         </div>
     );
 }

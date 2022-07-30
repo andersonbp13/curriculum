@@ -1,16 +1,16 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import CurriculumPage from "./pages/CurriculumPage";
-import AppBar from "./components/AppBar";
-import AboutPage from "./pages/AboutPage";
+import {AboutPage, CurriculumPage} from "pages";
+import {MainLayout} from "layouts";
 
 const App = () => {
     return(
         <div>
             <BrowserRouter>
-                <AppBar/>
                 <Routes>
-                    <Route path='/' element={<CurriculumPage/>}/>
-                    <Route path='/about' element={<AboutPage/>}/>
+                    <Route path='/' element={<MainLayout/>}>
+                        <Route index element={<CurriculumPage/>}/>
+                        <Route path='/about' element={<AboutPage/>}/>
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </div>
