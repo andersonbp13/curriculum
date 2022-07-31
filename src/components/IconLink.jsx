@@ -1,13 +1,7 @@
-const IconLink = ({link, image}) => {
-    return (
-        <a
-            href={link}
-            children={
-                <div>
-                    <img src={image} className="mx-2 h-fit w-8"/>
-                </div>}
-        />
-    );
-}
+const IconLink = ({ link, image }) => (
+  <a href={link}>
+    <img src={image} className=' h-fit w-8' alt={link} />
+  </a>
+);
 
 export default IconLink;
